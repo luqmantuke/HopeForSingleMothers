@@ -25,6 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'HFSM',
+    'disqus',
 ]
 
 MIDDLEWARE = [
@@ -107,3 +110,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media')
+
+# Adding Disqus 
+DISQUS_API_KEY = 'axTa1LTUAtaD0K6xmUEbKoXM5vPl3GhpEwvfsgnFVTpqOFKAOmlm77Kge0YR9VNx'
+DISQUS_WEBSITE_SHORTNAME = 'tanzablog'

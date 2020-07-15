@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+HFSM-BLOG
+{% endblock title %}
+{% block body %}
+<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- MAIN -->
+				<main id="main" class="col-md-9">
+					<!-- article -->
+					<div class="article">
+						<!-- article img -->
+						<div class="article-img">
+							<img src="{{ post.image.url }}" alt="">
+						</div>
+						<!-- article img -->
+
+						<!-- article content -->
+						<div class="article-content">
+							<!-- article title -->
+							<h2 class="article-title">{{ post.title }}</h2>
+							<!-- /article title -->
+
+							<!-- article meta -->
+							<ul class="article-meta">
+								<li>{{ post.time_stamp }}</li>
+								<li>{{ post.author }}</li>
+                                	<!-- article share -->
+							<ul class="share">
+								<li>SHARE:</li>
+
+								<li><a href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text=<TITLE>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Twitter"><i class="fa fa-twitter" target="_blank"></i></a></li>
+								<li><a href="whatsapp://send?text={{ request.build_absolute_uri }}" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp"><i class="fa fa-whatsapp"></i></a></li>
+								<li><a href="http://pinterest.com/pin/create/button/?url={{ request.build_absolute_uri }}"  target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							</ul>
+							<!-- /article share -->
+								
+							</ul>
+							<!-- /article meta -->
+
+							<p>{{ post.overeview }}
+
+						<!-- /article content -->
+
+						</div>
+						<!-- /article tags share -->
+
+				</main>
+				<!-- /MAIN -->
+
+ {% block comment %}
+      {% load disqus_tags %}
+      {% disqus_show_comments "tanzablog" %}
+      {% set_disqus_url object.get_absolute_url %}
+{% endblock comment %}
+
+{% endblock body %}
