@@ -1,0 +1,81 @@
+{% extends 'about.html' %}
+{% load static %}
+{% block title %}
+{% load crispy_forms_tags %}
+HFSM CONTACT
+{% endblock title %}
+{% block body %}
+<!-- HOME OWL -->
+		<div id="home-owl" class="owl-carousel owl-theme">
+			<!-- home item -->
+			<div class="home-item">
+				<!-- section background -->
+				<div class="section-bg" style="background-image: url({% static 'img/background-1.jpg' %});"></div>
+				<!-- /section background -->
+
+				<!-- home content -->
+				<div class="home">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="home-content">
+									<h1>Save The Children</h1>
+									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="primary-button">View Causes</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /home content -->
+			</div>
+			<!-- /home item -->
+
+			<!-- home item -->
+			<div class="home-item">
+				<!-- Background Image -->
+				<div class="section-bg" style="background-image: url({% static 'img/background-2.jpg' %});"></div>
+				<!-- /Background Image -->
+
+				<!-- home content -->
+				<div class="home">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="home-content">
+									<h1>Become A Volunteer</h1>
+									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<a href="#" class="primary-button">Join Us Now!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /home content -->
+			</div>
+			<!-- /home item -->
+		</div>
+		<!-- /HOME OWL -->
+<div class="container" style="padding-left: 25%; padding-top: 50%;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15932.588607389012!2d36.63002726417052!3d-3.313771489471502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18371e43a1782d97%3A0x40aefccb180589fb!2sNgaramtoni!5e0!3m2!1sen!2stz!4v1594930886661!5m2!1sen!2stz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<!-- article reply form -->
+		<div class="container" style="padding-left: 25%; padding-top: 5%;">
+                            <div class="container" style="padding-left: 25%; padding-top: 5%;">
+
+								<h3>Leave a reply</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+								<form method="post">
+									{% csrf_token %}
+									   {{ form|crispy }}
+									      <div class="container" style="padding-left: 45%;">
+
+											<button class="primary-button" type="submit">Submit</button>
+										   </div>
+										</div>
+									</div>
+								</form>
+		</div>
+							<!-- /article reply form -->
+{% endblock body %}

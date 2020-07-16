@@ -4,6 +4,8 @@
 HFSM-BLOG
 {% endblock title %}
 {% block body %}
+{% block post %}
+
 	<div id="page-header">
 			<!-- section background -->
 			<div class="section-bg" style="background-image: url({% static 'img/background-2.jpg' %});"></div>
@@ -107,10 +109,11 @@ HFSM-BLOG
 {% endif %}
 
 						<!-- /pagination -->
+
 					</div>
 				</main>
 				<!-- /MAIN -->
-
+{% endblock post %}
 				<!-- ASIDE -->
 				<aside id="aside" class="col-md-3">
 					<!-- category widget -->
@@ -122,57 +125,25 @@ HFSM-BLOG
 					<!-- posts widget -->
 					<div class="widget">
 						<h3 class="widget-title">Latest Posts</h3>
+						{% for post in posts|slice:":3" %}
 						<!-- single post -->
 						<div class="widget-post">
-							<a href="#">
 								<div class="widget-img">
-									<img src="{% static 'img/widget-1.jpg' %}" alt="">
+									<a href="{% url 'post_detail' post.slug  %}" target="_blank"><img src="{{ post.image.url }}" alt="" width=150 height=150></a>
 								</div>
 								<div class="widget-content">
-									Possit nostro aeterno eu vis, ut cum quem reque
+									<a href="{% url 'post_detail' post.slug  %}" target="_blank">{{ post.title }}</a>
 								</div>
-							</a>
+							
 							<ul class="article-meta">
-								<li>By John doe</li>
-								<li>12 November 2018</li>
+								<li>{{ post.author }}</li>
+								<li>{{ post.time_stamp }}</li>
 							</ul>
 						</div>
 						<!-- /single post -->
+                        {% endfor %}
 
-						<!-- single post -->
-						<div class="widget-post">
-							<a href="#">
-								<div class="widget-img">
-									<img src="{% static 'img/widget-2.jpg' %}" alt="">
-								</div>
-								<div class="widget-content">
-									Vix fuisset tibique facilisis cu. Justo accusata ius at
-								</div>
-							</a>
-							<ul class="article-meta">
-								<li>By John doe</li>
-								<li>12 November 2018</li>
-							</ul>
 						</div>
-						<!-- /single post -->
-
-						<!-- single post -->
-						<div class="widget-post">
-							<a href="#">
-								<div class="widget-img">
-									<img src="{% static 'img/widget-3.jpg' %}" alt="">
-								</div>
-								<div class="widget-content">
-									Possit nostro aeterno eu vis, ut cum quem reque
-								</div>
-							</a>
-							<ul class="article-meta">
-								<li>By John doe</li>
-								<li>12 November 2018</li>
-							</ul>
-						</div>
-						<!-- /single post -->
-					</div>
 					<!-- /posts widget -->
 
 				</aside>
@@ -183,4 +154,5 @@ HFSM-BLOG
 		<!-- /container -->
 	</div>
 	<!-- /SECTION -->
+	
 {% endblock body %}

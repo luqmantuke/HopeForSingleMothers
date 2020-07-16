@@ -50,12 +50,18 @@
 				
 
 				<!-- Nav menu -->
+				{% if messages %}<br>
+<div style="font-size:13px;" class="col-md-12 text-center mt-0 pt-0">
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message | safe }}</div>   
+  {% endfor %}
+</div>
+{% endif %}
 				<ul class="navbar-menu nav navbar-nav navbar-right">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Causes</a></li>
-					<li><a href="#">Contacts</a></li>
-					<li><a href="#">Blog</a></li>
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'contact' %}">Contacts</a></li>
+					<li><a href="{% url 'blog' %}">Blog</a></li>
 					<li><a href="#">Donate</a></li>
 				</ul>
 				<!-- Nav menu -->

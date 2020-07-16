@@ -32,3 +32,12 @@ def slug_generator(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(slug_generator, sender = Post)
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=100)
+    message = models.TextField(max_length=300)
+    
+    def __str__(self):
+        return f'{self.name} {self.email}'
