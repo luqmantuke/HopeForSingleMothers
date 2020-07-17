@@ -80,3 +80,6 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
+def donation(request):
+  return render(request, 'donation.html')
+

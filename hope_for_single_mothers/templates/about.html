@@ -67,26 +67,7 @@ ABOUT US
 					<!-- ASIDE -->
 					<aside id="aside" class="col-md-3">
 
-						<!-- posts widget -->
-						<div class="widget">
-							<h3 class="widget-title">Latest Posts</h3>
-								{% for post in posts|slice:":3" %}
-						<!-- single post -->
-						<div class="widget-post">
-								<div class="widget-img">
-									<a href="{% url 'post_detail' post.slug  %}" target="_blank"><img src="{{ post.image.url }}" alt="" width=150 height=150></a>
-								</div>
-								<div class="widget-content">
-									<a href="{% url 'post_detail' post.slug  %}" target="_blank">{{ post.title }}</a>
-								</div>
-							
-							<ul class="article-meta">
-								<li>{{ post.author }}</li>
-								<li>{{ post.time_stamp }}</li>
-							</ul>
-						</div>
-						<!-- /single post -->
-                        {% endfor %}
+						
 
 
 					</aside>

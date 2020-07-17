@@ -7,3 +7,4 @@ class ContactForm(ModelForm):
         model = Contact
         fields = ['name', 'email', 'phone', 'message']
   
+
