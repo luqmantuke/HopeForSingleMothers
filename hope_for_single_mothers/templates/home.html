@@ -18,9 +18,11 @@ Hope For Single Mothers
 						<div class="row">
 							<div class="col-md-8">
 								<div class="home-content">
-									<h1>Save The Children</h1>
-									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="primary-button">View Causes</a>
+									<h1 style="color: green;">Save Single Mothers</h1>
+									<p class="lead" style="color: black;">Join us in helping single mothers realize their full potential<br>
+									                                       and engage fully in transformation of their communities<br>
+																		   in order to achieve empowerment.</p>
+									<a href="{% url 'about' %}" class="primary-button" target="_blank	">View Causes</a>
 								</div>
 							</div>
 						</div>
@@ -43,8 +45,10 @@ Hope For Single Mothers
 							<div class="col-md-8">
 								<div class="home-content">
 									<h1>Become A Volunteer</h1>
-									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="primary-button">Join Us Now!</a>
+									<p class="lead" style="color: black;">"Little by little a bird builds it's nest".<br>
+													This saying can help Single Mothers by giving our total support to them and<br>
+													empowering them financially, psychologically and educationally.</p>
+									<a href="{% url 'donations' %}" class="primary-button" target="_blank">Join Us Now!</a>
 								</div>
 							</div>
 						</div>
@@ -67,12 +71,12 @@ Hope For Single Mothers
 				<!-- about content -->
 				<div class="col-md-5">
 					<div class="section-title">
-						<h2 class="title">Welcome to Charity</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<h2 class="title">Welcome to HFSM</h2>
+						<p class="sub-title">Hope For Single Mothers is non-profit organization that helps on empowering Single Mothers in Tanzania.</p>
 					</div>
 					<div class="about-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<a href="#" class="primary-button">Read More</a>
+						<p>Our overall goal is to help single mothers to know their rights , empower and build women to be very creative in enterpreneurship, leadership and gender equality.</p>
+						<a href="{% url 'about' %}" class="primary-button" target="_blank">Read More</a>
 					</div>
 				</div>
 				<!-- /about content -->
@@ -102,7 +106,7 @@ Hope For Single Mothers
 				<div class="col-md-3 col-sm-6">
 					<div class="number">
 						<i class="fa fa-smile-o"></i>
-						<h3>47k</h3>
+						<h3>100</h3>
 						<span>Donors</span>
 					</div>
 				</div>
@@ -112,8 +116,8 @@ Hope For Single Mothers
 				<div class="col-md-3 col-sm-6">
 					<div class="number">
 						<i class="fa fa-heartbeat"></i>
-						<h3>154K</h3>
-						<span>Children Saved</span>
+						<h3>30</h3>
+						<span>Single Mothers Saved</span>
 					</div>
 				</div>
 				<!-- /number -->
@@ -122,7 +126,7 @@ Hope For Single Mothers
 				<div class="col-md-3 col-sm-6">
 					<div class="number">
 						<i class="fa fa-money"></i>
-						<h3>785K</h3>
+						<h3>20k$</h3>
 						<span>Donated</span>
 					</div>
 				</div>
@@ -132,7 +136,7 @@ Hope For Single Mothers
 				<div class="col-md-3 col-sm-6">
 					<div class="number">
 						<i class="fa fa-handshake-o"></i>
-						<h3>357</h3>
+						<h3>10</h3>
 						<span>Volunteers</span>
 					</div>
 				</div>
@@ -155,7 +159,7 @@ Hope For Single Mothers
 				<div class="col-md-8 col-md-offset-2">
 					<div class="section-title text-center">
 						<h2 class="title">Our Causes</h2>
-						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p class="sub-title">Our overall goal is to help single mothers to know their rights , empower and build women to be very creative in enterpreneurship, leadership and gender equality.</p>
 					</div>
 				</div>
         </div>
@@ -176,9 +180,9 @@ Hope For Single Mothers
 				<!-- cta content -->
 				<div class="col-md-offset-2 col-md-8">
 					<div class="cta-content text-center">
-						<h1>Become A Volunteer</h1>
-						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="#" class="primary-button">Join Us Now!</a>
+						<h1 style="color: black;">Become A Volunteer</h1>
+						<p class="lead" style="color: rgb(7, 138, 42); font-weight: 600;">There are so many single mothers in Tanzania, we can't help help by ourselves, your donations matter to us give a hand to account on their empowerment.</p>
+						<a href="{% url 'donations' %}" class="primary-button" target="_blank">Join Us Now!</a>
 					</div>
 				</div>
 				<!-- /cta content -->
@@ -206,14 +210,48 @@ Hope For Single Mothers
 						<div class="testimonial">
 							<div class="testimonial-meta">
 								<div class="testimonial-img">
-									<img src="{% static 'img/avatar-1.jpg' %}" alt="">
+									<img src="{% static 'img/hope.jpg' %}" alt="">
 								</div>
-								<h3>John Doe</h3>
+								<h3>Hope Winfrey</h3>
 								<span>Volunteer</span>
 							</div>
 							<div class="testimonial-quote">
 								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<p>I first came to Tanzania and was touched on how single mothers suffer. I promissed to myself to help them out. You can to.</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<div class="testimonial-img">
+									<img src="{% static 'img/chris.jpeg' %}" alt="">
+								</div>
+								<h3>Chris Barnet</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>I once met Hope and pinned me on how project of empowering single mothers and told me on the problems that they are facing and I decided to volunteer.</p>
+								</blockquote>
+							</div>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<div class="testimonial-img">
+									<img src="{% static 'img/mark.jpeg' %}" alt="">
+								</div>
+								<h3>Mark Tuke</h3>
+								<span>Volunteer</span>
+							</div>
+							<div class="testimonial-quote">
+								<blockquote>
+									<p>I was raised by a single mother back in Canada. But the life was good because she was empowered, in here it's differen't that's why I keep on volunteering.</p>
 								</blockquote>
 							</div>
 						</div>
@@ -230,41 +268,7 @@ Hope For Single Mothers
 							</div>
 							<div class="testimonial-quote">
 								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</blockquote>
-							</div>
-						</div>
-						<!-- /testimonial -->
-
-						<!-- testimonial -->
-						<div class="testimonial">
-							<div class="testimonial-meta">
-								<div class="testimonial-img">
-									<img src="{% static 'img/avatar-1.jpg' %}" alt="">
-								</div>
-								<h3>John Doe</h3>
-								<span>Volunteer</span>
-							</div>
-							<div class="testimonial-quote">
-								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</blockquote>
-							</div>
-						</div>
-						<!-- /testimonial -->
-
-						<!-- testimonial -->
-						<div class="testimonial">
-							<div class="testimonial-meta">
-								<div class="testimonial-img">
-									<img src="{% static 'img/avatar-2.jpg' %}" alt="">
-								</div>
-								<h3>John Doe</h3>
-								<span>Volunteer</span>
-							</div>
-							<div class="testimonial-quote">
-								<blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									<p>Actually I took a vacation in Tanzania and I saw couple of single mothers suffering. I decided to help them.</p>
 								</blockquote>
 							</div>
 						</div>

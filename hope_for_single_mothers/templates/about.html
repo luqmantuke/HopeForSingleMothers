@@ -5,6 +5,29 @@
 ABOUT US
 {% endblock title %}
 {% block body %}
+<!-- Page Header -->
+			<div id="page-header">
+				<!-- section background -->
+				<div class="section-bg" style="background-image: url({% static 'img/background-2.jpg' %});"></div>
+				<!-- /section background -->
+
+				<!-- page header content -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="header-content">
+								<h1>About Us</h1>
+								<ul class="breadcrumb">
+									<li><a href="{% url 'home' %}" target="_blank">Home</a></li>
+									<li><a href="{% url 'donations' %}" target="_blank">Donate</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /page header content -->
+			</div>
+			<!-- /Page Header -->
 	<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -17,7 +40,7 @@ ABOUT US
 						<div class="article causes-details">
 							<!-- article img -->
 							<div class="article-img">
-								<img src="{% static 'img/post-img.jpg' %}" alt="">
+								<img src="{% static 'img/about01.jpg' %}" alt="">
 							</div>
 							<!-- article img -->
 
@@ -25,35 +48,27 @@ ABOUT US
 							<div class="clearfix">
 								<div class="causes-progress">
 									<div class="causes-progress-bar">
-										<div style="width: 53%;">
-											<span>53%</span>
+										<div style="width: 10%;">
+											<span>5%</span>
 										</div>
 									</div>
 									<div>
-										<span class="causes-raised">Raised: <strong>52.000$</strong></span>
-										<span class="causes-goal">Goal: <strong>90.000$</strong></span>
+										<span class="causes-raised">Raised: <strong>20,000$</strong></span>
+										<span class="causes-goal">Goal: <strong>100,000.000$</strong></span>
 									</div>
 								</div>
-								<a href="#" class="primary-button causes-donate">Donate Now</a>
+								<a href="{% url 'donations' %}" class="primary-button causes-donate" target="_blank">Donate Now</a>
 							</div>
 							<!-- /causes progress -->
 
 							<!-- article content -->
 							<div class="article-content">
 								<!-- article title -->
-								<h2 class="article-title">Possit nostro aeterno eu vis, ut cum quem reque</h2>
+								<h2 class="article-title">About and Causes of Hope For Single Mothers</h2>
 								<!-- /article title -->
 
-								<!-- article meta -->
-								<ul class="article-meta">
-									<li>12 November 2018</li>
-									<li>By John doe</li>
-									<li>0 Comments</li>
-								</ul>
-								<!-- /article meta -->
-
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Hope For Single Mothers was founded in 2018, our main goal was and still lighting the path for single mothers in Tanzania. They are facing a lot and by themselves can't handle all these together. More especially raising and taking care of the family, meanwhile they have no money or skills to help them out in their daily basis.</p>
+								<p>Our overall goal is to help single mothers to know their rights , empower and build women to be very creative in enterpreneurship, leadership and gender equality. Our core values are: DIGNITY, UNITY IN DIVERSITY, TEAMWORK, CARING, ACCOUNTABILITY AND INTEGRITY.</p>
 							</div>
 							<!-- /article content -->
 
