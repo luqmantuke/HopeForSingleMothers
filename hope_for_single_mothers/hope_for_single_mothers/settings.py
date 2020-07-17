@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -118,3 +119,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'blog/media')
 # Adding Disqus 
 DISQUS_API_KEY = 'axTa1LTUAtaD0K6xmUEbKoXM5vPl3GhpEwvfsgnFVTpqOFKAOmlm77Kge0YR9VNx'
 DISQUS_WEBSITE_SHORTNAME = 'tanzablog'
+django_heroku.settings(locals())
